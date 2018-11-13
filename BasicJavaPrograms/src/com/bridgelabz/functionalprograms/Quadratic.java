@@ -1,0 +1,116 @@
+package com.bridgelabz.functionalprograms;
+
+import com.bridgelabz.utility.Utility;
+
+public class Quadratic {
+
+	public static void main(String[] args) {
+
+				
+			Utility utility =  new Utility();
+			System.out.println("Enter 1st value:");
+			int a=utility.inputInteger();
+			
+			System.out.println("Enter 2nd value:");
+			int b=utility.inputInteger();
+			
+			System.out.println("Enter 3rd value:");
+			int c=utility.inputInteger();
+			
+			utility.root(a,b,c);
+			
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

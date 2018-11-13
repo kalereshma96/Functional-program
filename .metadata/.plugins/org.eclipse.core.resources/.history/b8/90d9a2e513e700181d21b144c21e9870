@@ -297,28 +297,6 @@ public long elapse()
 	return e;
 }
 
-/***************************** Quadratic*******************************/
-
-/**
- * @param a
- * @param b
- * @param c
- */
-public void root(int a, int b, int c) {
-
-	System.out.println(a);
-	double delta = (b * b)- (4 * a * c);
-	//System.out.println("roots are: "+delta);
-
-	int Root1  = (int)((-b + Math.sqrt(delta))/2*a);
-	int Root2  = (int)((-b - Math.sqrt(delta))/2*a);
- 
-	System.out.println("Root 1 of x is:"+Root1);
-	System.out.println("Root 2 of x is:"+Root2);
-
-}
-
-
 
 }  
 

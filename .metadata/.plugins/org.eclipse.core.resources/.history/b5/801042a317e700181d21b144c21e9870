@@ -306,8 +306,7 @@ public long elapse()
  */
 public void root(int a, int b, int c) {
 
-	System.out.println(a);
-	double delta = (b * b)- (4 * a * c);
+	double delta = (b*b)- (4*a*c);
 	//System.out.println("roots are: "+delta);
 
 	int Root1  = (int)((-b + Math.sqrt(delta))/2*a);
