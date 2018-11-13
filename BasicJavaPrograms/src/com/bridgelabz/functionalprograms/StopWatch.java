@@ -11,13 +11,13 @@ public class StopWatch {
 		
 		//StopWatch sw=new StopWatch()
      Utility utility=new Utility();
-     System.out.println("press any key to start timer");
+     System.out.println("press any number to start timer:");
       utility.inputInteger();
       utility.start();
   
      
      
-     System.out.println("press any key to stop timer");
+     System.out.println("press any number to stop timer:");
      utility.inputInteger();
      utility.stop();
    

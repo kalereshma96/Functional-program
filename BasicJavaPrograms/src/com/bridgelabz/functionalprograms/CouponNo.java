@@ -13,7 +13,7 @@ public class CouponNo {
 		int n=utility.inputInteger();
 		int count=utility.inputInteger();
 		//count=collect(n);
-		System.out.println("count is :" +count);
+		System.out.println("count is :" );
 		
 
 	}

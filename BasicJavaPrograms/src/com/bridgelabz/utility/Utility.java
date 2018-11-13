@@ -13,7 +13,8 @@ public class Utility {
 	 * @return String: the input string given by the user
 	 */
 	public String inputString() {
-		return scanner.next();
+		String a=scanner.nextLine();
+		return a;
 	}
 	
 	/**
@@ -345,6 +346,28 @@ public void windchill(double t, double v) {
 }
 
 
+}
+/************************** Anagram ***************************************/
+ 
+public  void  anagram(String str3, String str4) {
+
+	
+	char[] a=str3.toCharArray();
+	char[] b=str4.toCharArray();
+	
+	str3.toLowerCase();
+	str4.toLowerCase();
+	
+	if(str3.length()==str4.length())
+	{
+		System.out.println("Entered strings are anagram");
+	}
+	else
+	{
+		System.out.println("entered strings are not anagram");
+	}
+	
+	
 }
 }  
 
