@@ -20,8 +20,8 @@ public class TwoDarray {
 
             
 			int[][][][] a;
-			int[][] y=utility.readInt2D(y, m,n);
-            System.out.println(y);
+			//int[][] y=utility.readInt2D(y, m,n);
+            //System.out.println(y);
 
 	}
 

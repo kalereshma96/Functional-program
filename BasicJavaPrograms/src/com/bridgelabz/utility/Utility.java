@@ -306,21 +306,49 @@ public long elapse()
  */
 public void root(int a, int b, int c) {
 
-	System.out.println(a);
+			
 	double delta = (b * b)- (4 * a * c);
 	//System.out.println("roots are: "+delta);
 
 	int Root1  = (int)((-b + Math.sqrt(delta))/2*a);
 	int Root2  = (int)((-b - Math.sqrt(delta))/2*a);
- 
-	System.out.println("Root 1 of x is:"+Root1);
-	System.out.println("Root 2 of x is:"+Root2);
-
+  if( Root1==0 && Root2 ==0)
+  {
+	  System.out.println("a and c valus must be smaller than b");
+  }
+  else
+  {
+	System.out.println("First square root is:"+Root1);
+	System.out.println("Second square root is:"+Root2);
+  }
 }
 
 
+/************************** Wind chill *************************/
 
+public void windchill(double t, double v) {
+	
+	if(t>50 &&(v>120||v<3)) {
+		
+		System.out.println("enter valid temp and speed");
+	}
+	
+	else
+	{
+	
+	   double   w = (35.74 + 0.6215*t + (0.4275*t - 35.75)  *  Math.pow(v, 0.16));
+	     
+	      System.out.println("the temperature is:"+t);
+	      System.out.println("the speed is:"+v);
+	      System.out.println("wind chill:"+w);
+	
+}
+
+
+}
 }  
+
+
 
 	
 

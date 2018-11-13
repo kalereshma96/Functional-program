@@ -19,6 +19,8 @@ public class Quadratic {
 			
 			utility.root(a,b,c);
 			
+			
+			
 	}
 
 }
