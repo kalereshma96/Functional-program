@@ -1,0 +1,26 @@
+package com.bridgelabz.functionalprograms;
+
+import com.bridgelabz.utility.Utility;
+
+public class TwoDarray {
+
+	public static void main(String[] args) {
+
+    	
+    		 
+            /*double[][] x=TwoDarray.readDouble2D();
+            System.out.println(x);*/
+            
+		   Utility utility = new Utility();
+
+            int[][] y=TwoDarray.readInt2D();
+            System.out.println(y);
+
+	}
+
+	private static int[][] readInt2D() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

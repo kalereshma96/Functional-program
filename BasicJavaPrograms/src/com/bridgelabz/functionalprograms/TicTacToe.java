@@ -1,0 +1,11 @@
+package com.bridgelabz.functionalprograms;
+
+public class TicTacToe {
+	
+	int col=0;
+	int row =0;
+
+	public static void main(String[] args) {
+	}
+
+}

@@ -1,0 +1,33 @@
+package com.bridgelabz.functionalprograms;
+
+import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
+
+
+
+		public class Harmonic {
+
+			public static void main(String[] args) {
+				// initializing variables
+
+				
+				Utility utility = new Utility();
+
+				
+				double result = 0,n, i;
+
+				//Scanner scan = new Scanner(System.in);
+
+				System.out.println("enter the harmonic no u want to find");
+				//n = scan.nextInt();
+		       // scan.close();
+				
+				n=utility.inputInteger();
+		        
+		        utility.harmonic(n);
+		
+		
+	}
+
+}
