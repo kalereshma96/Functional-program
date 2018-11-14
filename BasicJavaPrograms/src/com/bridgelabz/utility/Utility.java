@@ -1,5 +1,6 @@
 package com.bridgelabz.utility;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Utility {
@@ -67,6 +68,10 @@ public class Utility {
 	}
 
 /****************************Leap Year**************************************/	
+	/**This program checks entered year is leap or not.
+	 * @param year it return year
+	*/
+	
 	public void leap(int year) {
 		// TODO Auto-generated method stub
 	
@@ -79,7 +84,9 @@ public class Utility {
 	            	
 	            {
 	                if (year % 400 == 0)
-	                	
+      /* @param year if entered year is leap then its return
+	 * true otherwise false.
+	 */	
 	                	isleap=true;
 	                else
 	                	isleap=false;
@@ -106,6 +113,11 @@ public class Utility {
 	
 /***************************Power of 2*******************************/
 
+/** This program takes a command-line argument N and prints a
+ *  table of the powers of 2 that are less than or equal to 2^N.
+ * 
+ */
+
 public void power(int power) {
 	// TODO Auto-generated method stub
 
@@ -119,6 +131,9 @@ public void power(int power) {
      {
      
      int temp=1;
+     
+     /*repeat until i equals N*/
+
      for(int i=1;i<power;i++)
      {
   	   temp=temp*2;
@@ -132,9 +147,12 @@ public void power(int power) {
 
 }
 /************************ Harmonic Number*****************************/
+/**This program takes the harmonic value N and Prints
+ *  the Nth harmonic number: 1/1 + 1/2 + ... + 1/N. 
+ */
 public void harmonic(int n) {
 	
-	
+	/* Ensure N is not equal to zero*/
 	if(n != 0)	 
    	 
     {
@@ -148,27 +166,36 @@ public void harmonic(int n) {
 
 				result = result + (1 / i);{
 							} 	
-				//n= (int)result;
 				
+	 /*Print the Nth Harmonic Value.*/
+	
 		System.out.println("value of harmonic no:" + n + " is " + result);
-			
-
 		}
     else
-    {
-   	
-		   System.out.println("enter no greater than 0");
+    {	   System.out.println("enter no greater than 0");
 
 		}
-	
 }
 
 
 /************************* Gambler ******************************************/ 
-
+/*
+ *  Simulates a gambler who start with $stake and place fair $1 
+ *  bets until  goes broke (i.e. has no money) or reach $goal.
+ *  Keeps track of the number of timese wins and the number of
+ *  bets makes. Run the experiment N times, averages the results, 
+ *  and prints them out.
+ */
 public void gambler(int $stake, int $goal, int noOfTimes) {
 	
     int bets=0,wins=0;
+    
+    /*
+     * Take $Stake, $Goal and Number of times as
+     * a input.
+     * Play till the gambler is broke or has won
+
+     */
 	for(int i=0; i<noOfTimes; i++)
 	{
 		int money=$stake;
@@ -191,7 +218,7 @@ public void gambler(int $stake, int $goal, int noOfTimes) {
 	}
 		System.out.println(wins+ "no of wins" +noOfTimes);
 	    System.out.println("percentage of wins:" +100*wins/noOfTimes);
-		System.out.println("Avg bets:" +100*bets/noOfTimes);
+		System.out.println("percentage of loss:"+100-wins/noOfTimes);
 	
 }
 	
@@ -357,8 +384,11 @@ public  void  anagram(String str3, String str4) {
 	
 	str3.toLowerCase();
 	str4.toLowerCase();
+	Arrays.sort(a);
+	Arrays.sort(b);
 	
-	if(str3.length()==str4.length())
+	if(Arrays.equals(a, b))
+//	if(str3.length()==str4.length())
 	{
 		System.out.println("Entered strings are anagram");
 	}
@@ -369,7 +399,69 @@ public  void  anagram(String str3, String str4) {
 	
 	
 }
-}  
+
+  
+/************************* Prime Number
+ * @param s2 ****************************************/
+
+public void primeNumber(int s1, int s2) {
+   int flag = 0;
+   
+	
+   System.out.println("Prime numbers between entered range ares:");
+
+	for(int i=s1; i<=s2; i++)
+	{
+		for(int j=2; j<i; j++)
+		{
+			if(i%j==0)
+			{
+
+				flag = 0;
+				break;
+			}
+			else
+			{
+				flag=1;
+				//break;
+			}
+		}
+		if(flag==1)
+		{
+			System.out.println(i);
+		}
+	}
+}
+
+
+/**************************** Palindrome anagram  *********************/ 
+
+public void palindrome() {
+
+	
+	int[] n=new int[1000];
+	int r;
+	
+	int temp=0;
+	for(int i=0;i<n.length; i++) {
+	 int num=n[i];	
+	 int sum=0;
+	
+	while(num>0)
+	{
+		r=num%10;
+		sum=(sum*10)+r;
+	}    num=num/10;
+	if(n[i]==sum)
+	
+		System.out.println("entered number is palindrome..");
+	
+	else
+	
+		System.out.println("entered number is not palindrome:");
+	}
+}
+}
 
 
 

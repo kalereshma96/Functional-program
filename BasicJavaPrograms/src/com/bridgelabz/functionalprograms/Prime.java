@@ -11,9 +11,10 @@ public class Prime {
 		
 	               	Utility utility = new Utility();
                     System.out.println("enter number:");
-					Scanner scan=new Scanner(System.in);
-					int n=scan.nextInt();
-					scan.close();
+					//Scanner scan=new Scanner(System.in);
+					//int n=scan.nextInt();
+					//scan.close();
+					int n=utility.inputInteger();
 					utility.prime(n);
 	            				
 	}
