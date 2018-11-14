@@ -1,0 +1,10 @@
+package com.bridgelabz.algorithmPrograms;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+    
+		System.out.println("Prime numbers between 0-1000 ares: ");
+	}
+
+}

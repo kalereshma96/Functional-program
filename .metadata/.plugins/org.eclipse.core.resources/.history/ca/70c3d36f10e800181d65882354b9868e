@@ -1,0 +1,475 @@
+package com.bridgelabz.utility;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Utility {
+
+	Scanner scanner = new Scanner(System.in);
+	
+	/**
+	 * This method takes an input string from the user and returns
+	 * it to the specified method. 
+	 * 
+	 * @return String: the input string given by the user
+	 */
+	public String inputString() {
+		String a=scanner.nextLine();
+		return a;
+	}
+	
+	/**
+	 * This method takes an input string from the user and returns
+	 * it to the specified method. 
+	 * 
+	 * @return String: the input string given by the user
+	 */
+	public Integer inputInteger() {
+		return scanner.nextInt();
+	}
+	
+	
+	/**
+	 * This method replaces the template with the given input string
+	 * 
+	 * @param template the string which needs to be modified
+	 * @param userName the input string given by the user
+	 * @return output the modified string
+	 */
+	public String replaceString(String template, String userName) {
+		if (userName.length() < 3)
+			return "Please input name with more than 3 characters";
+		else {
+			String output = template.replace("<<UserName>>", userName);
+			return output;
+		}
+	}
+
+/****************************Prime Factor*********************************/
+	/**This method is used for to check the entered number is prime
+	 * or not.
+	 * @param n Divide the entered number by j to get its factors.
+	 */
+	public void prime(int n) {
+		// TODO Auto-generated method stub
+		for(int j=2;j<=n;j++)
+			
+		{		while(n%j==0)
+			{
+				System.out.println(j+ " ");
+				n=n/j;
+			}
+		}
+	if(n>2)
+	{
+		System.out.println(n);
+	}
+
+	}
+
+/****************************Leap Year**************************************/	
+	/**This program checks entered year is leap or not.
+	 * @param year it return year
+	*/
+	
+	public void leap(int year) {
+		// TODO Auto-generated method stub
+	
+		  boolean isleap = false;
+	        
+	        
+	        if (year % 4 == 0)
+	        {
+	            if (year % 100 == 0)
+	            	
+	            {
+	                if (year % 400 == 0)
+      /* @param year if entered year is leap then its return
+	 * true otherwise false.
+	 */	
+	                	isleap=true;
+	                else
+	                	isleap=false;
+
+	            }
+	            else
+	            	
+	            	isleap=true;
+	        }
+	        else
+	        {
+	        	isleap = false;
+	        	
+	        }	
+	        
+	        if (isleap==true)
+	        
+	        	System.out.println(year + "\nis a leap year");
+	        	
+	        else
+	        	System.out.println(year + "\nis not a leap year");     	     	
+		
+	}
+	
+/***************************Power of 2*******************************/
+
+/** This program takes a command-line argument N and prints a
+ *  table of the powers of 2 that are less than or equal to 2^N.
+ * 
+ */
+
+public void power(int power) {
+	// TODO Auto-generated method stub
+
+	 if(power >31)
+     {
+  	   System.out.println("enter no less than 31");
+  	  
+  	  
+  		   
+     }else
+     {
+     
+     int temp=1;
+     
+     /*repeat until i equals N*/
+
+     for(int i=1;i<power;i++)
+     {
+  	   temp=temp*2;
+  	   
+     }
+  
+  System.out.println(power + "of no is" + temp);
+
+     }
+
+
+}
+/************************ Harmonic Number*****************************/
+/**This program takes the harmonic value N and Prints
+ *  the Nth harmonic number: 1/1 + 1/2 + ... + 1/N. 
+ */
+public void harmonic(int n) {
+	
+	/* Ensure N is not equal to zero*/
+	if(n != 0)	 
+   	 
+    {
+   	 double result=0;
+   	 
+   	System.out.println("1  ");
+	for(int k = 2; k<=n ; k++) {
+		System.out.println( "+" + "1/" + k );
+	}
+	for (double i = 1; i <= n; i++) 
+
+				result = result + (1 / i);{
+							} 	
+				
+	 /*Print the Nth Harmonic Value.*/
+	
+		System.out.println("value of harmonic no:" + n + " is " + result);
+		}
+    else
+    {	   System.out.println("enter no greater than 0");
+
+		}
+}
+
+
+/************************* Gambler ******************************************/ 
+/*
+ *  Simulates a gambler who start with $stake and place fair $1 
+ *  bets until  goes broke (i.e. has no money) or reach $goal.
+ *  Keeps track of the number of timese wins and the number of
+ *  bets makes. Run the experiment N times, averages the results, 
+ *  and prints them out.
+ */
+public void gambler(int $stake, int $goal, int noOfTimes) {
+	
+    int bets=0,wins=0;
+    
+    /*
+     * Take $Stake, $Goal and Number of times as
+     * a input.
+     * Play till the gambler is broke or has won
+
+     */
+	for(int i=0; i<noOfTimes; i++)
+	{
+		int money=$stake;
+		
+		while((money>0)&&(money<$goal))
+		{
+			bets++;
+		
+	if(Math.random()<0.5)
+	
+	  money++;
+	else
+	 money--;
+	     }
+	
+		if(money==$goal)
+		{
+			wins++;
+		}
+	}
+		System.out.println(wins+ "no of wins" +noOfTimes);
+	    System.out.println("percentage of wins:" +100*wins/noOfTimes);
+	//	System.out.println("percentage of loss:"+100-wins/noOfTimes);
+	
+}
+	
+
+
+/************************ Two D array  ********************************************/
+
+
+public int[][] readInt2D(int a[][],int m, int n) {
+	
+
+    int i,j;
+   
+	
+	//int[][] a = new int[m][n];
+     for ( i = 0; i < m; i++) {
+    for ( j = 0; j < n; j++) {
+         
+           a[i][j]=scanner.nextInt();
+       }
+  
+
+			System.out.println(a[m][n]);
+       }
+	
+	return null;
+}
+
+
+
+	         
+
+/*************************** Coupon NUmber *****************************************/
+
+
+
+private static int getCoupon(int n) {
+	// TODO Auto-generated method stub
+	   return(int) (Math.random()*n);
+
+}
+
+private static int collect(int n) {
+	
+	
+//		int [] isCollected=new int(n);
+		
+		boolean[] a = new boolean[n];
+
+
+		int count=0;
+		int distinct=0;
+		
+		while(distinct<n)
+			{
+			int value=getCoupon(n);
+             count++;	
+            if( !a[value])
+     
+            {
+            	distinct++;
+            	a[value] = true;
+            }
+		}
+		
+		return count;
+		
+	}
+
+
+	
+
+	
+
+
+	
+/************************** Stop Watch ************************/
+/*
+ * This program for measuring the time that elapses
+ * between the start and end clicks.*/
+
+ 
+
+long startTime=0;
+long stopTime=0;
+long elapsedTime;
+public void start()
+{
+
+	startTime=System.currentTimeMillis();
+	System.out.println("the current start time is:"+startTime);
+	//return startTime; 
+}
+
+public void stop( )
+{	
+
+	 stopTime=System.currentTimeMillis();
+	 System.out.println();
+//	return stopTime;
+	 
+}
+
+public long elapse()
+{
+    long e = stopTime - startTime;
+//	System.out.println("Elapsed time is:"+elapsedTime);
+	return e;
+}
+
+/***************************** Quadratic*******************************/
+
+/**
+ * @param a
+ * @param b
+ * @param c
+ */
+public void root(int a, int b, int c) {
+
+			
+	double delta = (b * b)- (4 * a * c);
+	//System.out.println("roots are: "+delta);
+
+	int Root1  = (int)((-b + Math.sqrt(delta))/2*a);
+	int Root2  = (int)((-b - Math.sqrt(delta))/2*a);
+  if( Root1==0 && Root2 ==0)
+  {
+	  System.out.println("a and c valus must be smaller than b");
+  }
+  else
+  {
+	System.out.println("First square root is:"+Root1);
+	System.out.println("Second square root is:"+Root2);
+  }
+}
+
+
+/************************** Wind chill *************************/
+
+public void windchill(double t, double v) {
+	
+	if(t>50 ||(v>120||v<3)) {
+		
+		System.out.println("enter valid temp and speed");
+	}
+	
+	else
+	{
+	
+	   double   w = (35.74 + 0.6215*t + (0.4275*t - 35.75)  *  Math.pow(v, 0.16));
+	     
+	      System.out.println("the temperature is:"+t);
+	      System.out.println("the speed is:"+v);
+	      System.out.println("wind chill:"+w);
+	
+}
+
+
+}
+/************************** Anagram ***************************************/
+ 
+public  void  anagram(String str3, String str4) {
+
+	
+	char[] a=str3.toCharArray();
+	char[] b=str4.toCharArray();
+	
+	str3.toLowerCase();
+	str4.toLowerCase();
+	Arrays.sort(a);
+	Arrays.sort(b);
+	
+	//if(Arrays.equals(a, b))
+    if(str3.length()==str4.length())
+	{
+		System.out.println("Entered strings are anagram");
+	}
+	else
+	{
+		System.out.println("entered strings are not anagram");
+	}
+	
+	
+}
+
+  
+/************************* Prime Number ****************************************/
+
+public int[] primeNumber() {
+   int flag = 0,count=0;
+   int [] a=new int[1000];
+	
+   System.out.println("Prime numbers between entered range ares:");
+
+	for(int i=3; i<=1000; i++)
+	{
+		for(int j=2; j<i; j++)
+		{
+			if(i%j==0)
+			{
+
+				flag = 0;
+				break;
+			}
+			else
+			{
+				flag=1;
+				//break;
+			}
+		}
+		if(flag==1)
+		{
+			//System.out.println(i);
+			a[count++]=i;
+		}
+	}
+	
+	return a;
+}
+
+
+/**************************** Palindrome anagram  *********************/ 
+
+public void palindrome() {
+
+	
+	int[] n=new int[1000];
+	int r;
+	
+	int temp=0;
+	for(int i=0;i<n.length; i++) {
+	 int num=n[i];	
+	 int sum=0;
+	
+	while(num>0)
+	{
+		r=num%10;
+		sum=(sum*10)+r;
+	}    num=num/10;
+	if(n[i]==sum)
+	
+		System.out.println("entered number is palindrome..");
+	
+	else
+	
+		System.out.println("entered number is not palindrome:");
+	}
+}
+}
+
+
+
+	
+

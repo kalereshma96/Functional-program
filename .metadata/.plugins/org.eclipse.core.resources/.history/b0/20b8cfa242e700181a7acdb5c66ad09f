@@ -1,0 +1,20 @@
+package com.bridgelabz.algorithmPrograms;
+
+import com.bridgelabz.utility.Utility;
+
+public class AnagramDetect {
+
+	public static void main(String[] args) {
+		Utility utility=new Utility();
+		System.out.println("Enter first string..");
+    String a=utility.inputString();
+    System.out.println("enter 2nd string:");
+    String b = utility.inputString();
+    String c= a.replaceAll("\\s+",  " ");
+    String d= b.replaceAll("\\s+",  " ");
+
+    utility.anagram(c,d);  
+    
+	}
+
+}

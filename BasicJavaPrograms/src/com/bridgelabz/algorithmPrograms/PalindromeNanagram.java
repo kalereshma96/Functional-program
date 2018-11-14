@@ -8,7 +8,8 @@ public class PalindromeNanagram {
      
 		Utility utility=new Utility();
 		utility.palindrome();
-		
+		//utility.primeNumber();
+	//	utility.anagram(str3, str4);
 	}
 
 }

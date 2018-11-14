@@ -1,0 +1,17 @@
+package com.bridgelabz.algorithmPrograms;
+
+import com.bridgelabz.utility.Utility;
+
+public class AnagramDetect {
+
+	public static void main(String[] args) {
+    Utility utility=new Utility();
+    String a = utility.inputString();
+    String b = utility.inputString();
+    utility.anagram(a,b);
+    
+    S
+    
+	}
+
+}

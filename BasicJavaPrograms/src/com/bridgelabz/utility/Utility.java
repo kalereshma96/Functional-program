@@ -218,7 +218,7 @@ public void gambler(int $stake, int $goal, int noOfTimes) {
 	}
 		System.out.println(wins+ "no of wins" +noOfTimes);
 	    System.out.println("percentage of wins:" +100*wins/noOfTimes);
-		System.out.println("percentage of loss:"+100-wins/noOfTimes);
+	//	System.out.println("percentage of loss:"+100-wins/noOfTimes);
 	
 }
 	
@@ -296,7 +296,11 @@ private static int collect(int n) {
 
 	
 /************************** Stop Watch ************************/
+/*
+ * This program for measuring the time that elapses
+ * between the start and end clicks.*/
 
+ 
 
 long startTime=0;
 long stopTime=0;
@@ -356,7 +360,7 @@ public void root(int a, int b, int c) {
 
 public void windchill(double t, double v) {
 	
-	if(t>50 &&(v>120||v<3)) {
+	if(t>50 ||(v>120||v<3)) {
 		
 		System.out.println("enter valid temp and speed");
 	}
@@ -387,8 +391,8 @@ public  void  anagram(String str3, String str4) {
 	Arrays.sort(a);
 	Arrays.sort(b);
 	
-	if(Arrays.equals(a, b))
-//	if(str3.length()==str4.length())
+	//if(Arrays.equals(a, b))
+    if(str3.length()==str4.length())
 	{
 		System.out.println("Entered strings are anagram");
 	}
@@ -401,16 +405,18 @@ public  void  anagram(String str3, String str4) {
 }
 
   
-/************************* Prime Number
- * @param s2 ****************************************/
+/************************* Prime Number ****************************************/
 
-public void primeNumber(int s1, int s2) {
-   int flag = 0;
-   
-	
+public int[] primeNumber() 
+{
+   int flag = 0,count=0;
+   int [] a=new int[1000];
+   int [] b=new int[1000];
+   for(int k=0;k<b.length;k++)
+	System.out.println(k);
    System.out.println("Prime numbers between entered range ares:");
 
-	for(int i=s1; i<=s2; i++)
+	for(int i=3; i<=1000; i++)
 	{
 		for(int j=2; j<i; j++)
 		{
@@ -429,8 +435,11 @@ public void primeNumber(int s1, int s2) {
 		if(flag==1)
 		{
 			System.out.println(i);
+			a[count++]=i;
 		}
 	}
+	
+	return a;
 }
 
 

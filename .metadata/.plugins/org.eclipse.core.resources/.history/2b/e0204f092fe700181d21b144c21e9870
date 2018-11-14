@@ -1,0 +1,36 @@
+package com.bridgelabz.functionalprograms;
+
+import java.util.Scanner;
+
+//import com.bridgelabz.utility.Utility;
+
+public class WindChill {
+	public static void main(String[] args) {
+
+
+	  /* int t=Integer.parseInt(args[0]);
+	   int v=Integer.parseInt(args[1]);*/
+		Scanner scan=new Scanner(System.in);
+		//Utility utiliy = new Utility();
+		//int t = utility.inputInteger();
+		//int v = utility.inputInteger();
+		//utility.windchill(t,v);
+		int t=scan.nextInt();
+		int v=scan.nextInt();
+	   
+	   
+	   
+	     double   w = 35.74 + 0.6215*t + (0.4275*t - 35.75)  *  Math.pow(v, 0.16);
+	     
+	      System.out.println("the temperature is:"+t);
+	      System.out.println("the speed is:"+v);
+	      System.out.println("wind chill:"+w);
+
+	      
+	      
+	      
+	      
+	   }
+
+
+}
